@@ -7,7 +7,7 @@ use App\Http\Controllers\LeadController;
 
 Route::get('/', function () {
     if (auth()->check()) {
-        return redirect()->route('leads');
+        return redirect()->route('dashboard');
     }
     return Inertia::render('auth/login');
 })->name('home');
